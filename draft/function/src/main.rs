@@ -4,7 +4,8 @@ fn main() {
     get_numb_square(11);
     get_numb_summ(17, 5);
     block_exmpl();
-    println!("Func Five = {}", five())
+    println!("Func Five = {}", five());
+    println!("Func PlusOne = {}", plus_one(221));
 }
 
 fn another_function() {
@@ -33,4 +34,8 @@ fn block_exmpl() {
 
 fn five () -> i32 {
     22
+}
+
+fn plus_one(x: i32) -> i32{
+    x + 1
 }
