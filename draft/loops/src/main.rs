@@ -4,7 +4,7 @@ use rand::Rng;
 
 fn main() {
     let mut rng = rand::thread_rng();
-    let x = rng.gen_range(1..5);
+    let x = rng.gen_range(1..6);
     
     let mut counter = 0;
 
@@ -19,6 +19,7 @@ fn main() {
     while_func(x);
     for_func(x);
     iter_func();
+    iter_un_diaposon();
 }
 
 fn while_func(x: i32) {
@@ -51,7 +52,12 @@ fn iter_func() {
 
 }
 
-
+fn iter_un_diaposon() {
+    for number in (1..11).rev() {
+        println!("{}!", number);
+    }
+    println!("START AGAIN!")
+}
 
 
 
