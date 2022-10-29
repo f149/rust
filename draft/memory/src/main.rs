@@ -17,9 +17,13 @@ fn main() {
     println!("Main string = {}", main_str);
     println!("Cloned string = {}", cloned_str);
 
-    let ss1 = gives_ownership();
+    let _ss1 = gives_ownership();
     let ss2 = String::from("MMCCXXII");
-    let ss3 = takes_and_gives_back(ss2);
+    let _ss3 = takes_and_gives_back(ss2);
+    
+    let b1 = String::from("hello");
+    let len = let_calculate_length(&b1);
+    println!("Length '{}' is {}.", b1, len)
 
 
 }
@@ -33,7 +37,7 @@ fn takes_and_gives_back(a_string: String) -> String {
     a_string
 }
 
-fn let_calculate_length(s: String) -> (String, usize) {
-    let length = s.len();
-    (s, length)
+fn let_calculate_length(s: &String) -> usize {
+    s.len()
 }
+
