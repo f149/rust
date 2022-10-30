@@ -23,7 +23,13 @@ fn main() {
     
     let b1 = String::from("hello");
     let len = let_calculate_length(&b1);
-    println!("Length '{}' is {}.", b1, len)
+    println!("Length '{}' is {}.", b1, len);
+
+    let mut s = String::from("222 ");
+    println!("Befor change {}", s);
+    change(&mut s);
+    println!("After change {}", s);
+
 
 
 }
@@ -39,5 +45,9 @@ fn takes_and_gives_back(a_string: String) -> String {
 
 fn let_calculate_length(s: &String) -> usize {
     s.len()
+}
+
+fn change(some_string: &mut String){
+    some_string.push_str("= CCXXII");
 }
 
